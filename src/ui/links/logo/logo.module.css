@@ -1,0 +1,32 @@
+.logo {
+	display: block;
+	width: fit-content;
+	padding-left: .3em;
+	font-size: 3.375em;
+	position: relative;
+	color: var(--text-color-primary);
+	transition: all .35s ease;
+}
+
+.logo_value_absolute {
+	display: block;
+	font-size: .35em;
+	position: absolute;
+	transform-origin: center;
+	font-weight: 300;
+	left: 1em;
+	top: 50%;
+	transform: translate(-75%, -50%) rotate(-90deg);
+}
+
+@media (min-width: 1024px) {
+	.logo:hover {
+		color: var(--text-color-primary-hover);
+	}
+}
+
+@media (max-width: 576px) {
+	.logo {
+		font-size: 2.75em;
+	}
+}

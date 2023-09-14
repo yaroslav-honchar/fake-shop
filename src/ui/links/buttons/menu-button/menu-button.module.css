@@ -1,0 +1,52 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2em;
+	min-width: 2em;
+	height: 2em;
+	position: relative;
+	z-index: 1150;
+}
+
+.icon {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: center center;
+	fill: var(--text-color-primary);
+	transition: all .45s ease;
+}
+
+.icon svg {
+	width: 100%;
+	height: 100%;
+}
+
+._close {
+	transform: translate(-50%, -50%) scale(0);
+	opacity: 0;
+}
+
+._active ._close {
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+}
+
+._active ._menu {
+	transform: translate(-50%, -50%) scale(0);
+	opacity: 0;
+}
+
+.button:hover .icon {
+	fill: var(--text-color-primary-hover);
+}
+
+@media (min-width: 993px) {
+	.button {
+		display: none;
+	}
+}

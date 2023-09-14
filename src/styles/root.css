@@ -1,0 +1,38 @@
+:root {
+	/* Base */
+	--white: #fff;
+	--black: #000;
+
+	/* Gold */
+	--gold-primary: #B88E2F;
+
+	/* Grey */
+	--grey-200: #dedede;
+	--grey-800: #333;
+
+	/* Blue */
+	--blue-500: #69b1ff;
+
+	/* Layout */
+	--bg-primary: var(--white);
+
+	/* Topography */
+	--font-primary: "Robot", sans-serif;
+	--font-size: 16px;
+	--text-color-primary: var(--grey-800);
+	--text-color-primary-hover: var(--blue-500);
+	@media (max-width: 1200px) {
+		--font-size: 14px;
+	}
+
+	/* System variables */
+	--header-offset-height: 65px;
+	--current-scrollbar-width: 0px;
+
+	/* Media up */
+	--media-up-sm: 376px;
+
+	/* Media down */
+	--media-down-sm: "max-width: 376px";
+	--media-down-xxl: 1440px;
+}
