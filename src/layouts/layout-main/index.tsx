@@ -4,21 +4,30 @@ import React, {
   type FunctionComponent,
   type JSX,
   type ReactNode,
+  useEffect,
 } from "react"
 import { Roboto } from "next/font/google"
 import { Footer } from "@/layouts/layout-main/modules/footer"
 import { Header } from "@/layouts/layout-main/modules/header"
 import css from "@/layouts/layout-main/layout.module.css"
 import cn from "classnames"
-import { AppContextProvider, IAppContext } from "@/context/app.context"
 import { ConfigProvider } from "antd"
+import { Provider, useDispatch } from "react-redux"
+import { store } from "@/store/store"
+import { setCategories } from "@/store/slices/products.slice"
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
 })
 
-const LayoutMain = ({ children }: { children: ReactNode }): JSX.Element => {
+const LayoutMain = ({ children, categories }: { children?: ReactNode } & WithLayoutProps): JSX.Element => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(setCategories(categories))
+  }, [categories, dispatch])
+
   return (
     <div className={cn(css.layout, roboto.className)}>
       <Header />
@@ -30,16 +39,20 @@ const LayoutMain = ({ children }: { children: ReactNode }): JSX.Element => {
   )
 }
 
-export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown> & WithLayoutProps>(Component: FunctionComponent<T>) => {
   return function withLayoutComponent(props: T): JSX.Element {
     return (
-      <ConfigProvider>
-        <AppContextProvider categories={props.categories} isNavigationOpen={false}>
-          <LayoutMain>
+      <Provider store={store}>
+        <ConfigProvider>
+          <LayoutMain {...props}>
             <Component {...props} />
           </LayoutMain>
-        </AppContextProvider>
-      </ConfigProvider>
+        </ConfigProvider>
+      </Provider>
     )
   }
+}
+
+interface WithLayoutProps {
+  categories: string[]
 }

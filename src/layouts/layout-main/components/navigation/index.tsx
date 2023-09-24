@@ -1,18 +1,24 @@
 "use client"
 
-import React, { type JSX, useContext } from "react"
+import React, { type JSX } from "react"
 import Link from "next/link"
 import css from "./navigation.module.css"
 import cn from "classnames"
-import { AppContext } from "@/context/app.context"
+import { useDispatch, useSelector } from "react-redux"
+import { RootState } from "@/store/store"
+import { navigationClose } from "@/layouts/layout-main/components/navigation/navigation.slice"
 
 export const Navigation = (): JSX.Element => {
-  const { categories, isNavigationOpen, closeNavigationHandle } = useContext(AppContext)
+  const categories: string[] = useSelector((state: RootState) => state.products.categories)
+  const isNavigationOpen: boolean = useSelector((state: RootState) => state.navigation.isNavigationOpen)
+  const dispatch = useDispatch()
+
+  const closeNavigationHandle = () => {
+    dispatch(navigationClose())
+  }
 
   const lightboxClickHandle = (event: React.MouseEvent<HTMLDivElement>) => {
-    event.target === event.currentTarget
-    && closeNavigationHandle
-    && closeNavigationHandle()
+    event.target === event.currentTarget && closeNavigationHandle()
   }
 
   return (

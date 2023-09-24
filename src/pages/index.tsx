@@ -1,8 +1,8 @@
 import Head from "next/head"
 import { type JSX } from "react"
 import { GetStaticProps } from "next"
-import axios from "axios"
 import { withLayout } from "@/layouts/layout-main"
+import { ProductsService } from "@/services/products.service"
 
 function HomePage(): JSX.Element {
   return (
@@ -22,7 +22,7 @@ function HomePage(): JSX.Element {
 export default withLayout(HomePage)
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data: categories } = await axios.get(process.env.NEXT_PUBLIC_DOMAIN + "/products/categories")
+  const { data: categories } = await ProductsService.getCategories()
 
   return {
     props: {
