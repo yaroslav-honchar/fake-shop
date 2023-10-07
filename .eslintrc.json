@@ -1,28 +1,31 @@
 {
-  "extends": "next/core-web-vitals",
+  "parser": "@typescript-eslint/parser",
   "ignorePatterns": [
     "**/*.config.js"
   ],
   "rules": {
-    "react/display-name": "off",
-    "no-unused-vars": [
+    "@typescript-eslint/no-empty-interface": [
       "warn",
       {
-        "vars": "all",
-        "args": "after-used",
-        "ignoreRestSiblings": false
+        "allowSingleExtends": true
       }
     ],
+    "react/display-name": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-vars": "off",
     "semi": [
-      "error",
+      "warn",
       "never"
     ],
     "quotes": [
-      "error",
+      "warn",
       "double"
     ],
     "react/no-unescaped-entities": "off",
-    "@next/next/no-img-element": "off",
-    "no-duplicate-imports": "error"
-  }
+    "@next/next/no-img-element": "off"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ]
 }

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { scrollbarLock, scrollbarUnlock } from "@/utils/scrollbar-locker.utils"
+import { scrollbarLock, scrollbarUnlock } from "@/utils"
 
 interface INavigationState {
   isNavigationOpen: boolean

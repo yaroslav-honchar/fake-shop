@@ -2,15 +2,17 @@
 
 import React, { type JSX } from "react"
 import Link from "next/link"
-import css from "./navigation.module.css"
 import cn from "classnames"
 import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "@/store/store"
+import { type RootState } from "@/store/store"
 import { navigationClose } from "@/layouts/layout-main/components/navigation/navigation.slice"
+import css from "./navigation.module.css"
 
 export const Navigation = (): JSX.Element => {
   const categories: string[] = useSelector((state: RootState) => state.products.categories)
-  const isNavigationOpen: boolean = useSelector((state: RootState) => state.navigation.isNavigationOpen)
+  const isNavigationOpen: boolean = useSelector(
+    (state: RootState) => state.navigation.isNavigationOpen,
+  )
   const dispatch = useDispatch()
 
   const closeNavigationHandle = () => {
@@ -22,16 +24,20 @@ export const Navigation = (): JSX.Element => {
   }
 
   return (
-    <nav className={cn(css.nav, {
-      [css._show]: isNavigationOpen,
-    })}
-         onClick={lightboxClickHandle}
+    <nav
+      className={cn(css.nav, {
+        [css._show]: isNavigationOpen,
+      })}
+      onClick={lightboxClickHandle}
     >
       <div className={css.nav_wrap}>
         <ul className={css.nav_list}>
-          {
-            categories.map((category: string): JSX.Element => (
-              <li className={css.nav_item} key={category}>
+          {categories.map(
+            (category: string): JSX.Element => (
+              <li
+                className={css.nav_item}
+                key={category}
+              >
                 <Link
                   className={css.nav_link}
                   href={category.replace(/\s/g, "-")}
@@ -40,8 +46,8 @@ export const Navigation = (): JSX.Element => {
                   {category}
                 </Link>
               </li>
-            ))
-          }
+            ),
+          )}
         </ul>
       </div>
     </nav>
