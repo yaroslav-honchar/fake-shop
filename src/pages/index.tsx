@@ -3,7 +3,7 @@ import { type JSX } from "react"
 import { type GetStaticProps } from "next"
 import { withLayout } from "@/layouts/layout-main"
 import { getStaticPropsGlobal } from "@/lib"
-import { type IStaticPropsGlobalInterface } from "@/interfaces"
+// import { type IStaticPropsGlobalInterface } from "@/interfaces"
 
 function HomePage(): JSX.Element {
   return (
@@ -26,4 +26,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-interface HomePageProps extends IStaticPropsGlobalInterface {}
+// interface HomePageProps extends IStaticPropsGlobalInterface {}
