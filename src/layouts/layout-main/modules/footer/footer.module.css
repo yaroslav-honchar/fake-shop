@@ -5,8 +5,8 @@
 
 	row-gap: 20px;
 
-	width: calc(100% + 30px);
-	margin-inline: -15px;
+	width: calc(100% + 2rem);
+	margin-inline: -1rem;
 }
 
 .footer_col {
@@ -14,7 +14,7 @@
 
 	flex-direction: column;
 
-	padding-inline: 15px;
+	padding-inline: 1rem;
 }
 
 .footer_col:not(._col_auto) {
@@ -31,6 +31,7 @@
 
 .footer_col._col_items_center {
 	align-items: center;
+	justify-content: center;
 }
 
 .footer_top {
@@ -40,7 +41,7 @@
 }
 
 .footer_logo {
-	margin-bottom: 26px;
+	margin-bottom: 1.5rem;
 }
 
 .footer_descr {
@@ -48,11 +49,11 @@
 }
 
 .footer_links_title {
-	margin-bottom: 20px;
+	margin-bottom: 1.5rem;
 }
 
 .footer_links_item:not(:last-child) {
-	margin-bottom: 15px;
+	margin-bottom: 1rem;
 }
 
 .footer_link {
@@ -60,7 +61,7 @@
 
 	width: fit-content;
 
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 
 	transition: all .4s ease;
