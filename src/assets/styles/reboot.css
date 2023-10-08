@@ -6,6 +6,7 @@
 
 * {
 	box-sizing: border-box;
+
 	padding: 0;
 	margin: 0;
 }
@@ -24,6 +25,7 @@ ol,
 li {
 	padding: 0;
 	margin: 0;
+
 	list-style-type: none;
 }
 
@@ -43,8 +45,11 @@ a:hover {
 
 button {
 	padding: 0;
+
 	color: inherit;
+
 	cursor: pointer;
+
 	background-color: initial;
 	border: none;
 }
@@ -77,6 +82,7 @@ textarea {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	margin: 0;
+
 	appearance: none;
 }
 
@@ -88,6 +94,7 @@ fieldset {
 	min-inline-size: min-content;
 	padding: 0;
 	margin: 0;
+
 	border-color: transparent;
 	border-style: none;
 	border-width: 0;

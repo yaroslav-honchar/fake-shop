@@ -1,46 +1,58 @@
 .btn {
 	display: flex;
+
 	gap: .4rem;
+
 	align-items: center;
 	justify-content: center;
+
 	padding: .5rem 2rem;
+
 	font-size: 1.15rem;
+
 	border: 2px solid transparent;
+
 	transition: all .45s ease;
 }
 
 .primary {
 	color: var(--white);
+
 	background-color: var(--text-color-primary-hover);
 	border-color: var(--text-color-primary-hover);
 }
 
 .primary:hover {
 	color: var(--text-color-primary-hover);
+
 	background-color: var(--white);
 	border-color: var(--white);
 }
 
 .secondary {
 	color: var(--white);
+
 	background-color: var(--gray-800);
 	border-color: var(--gray-800);
 }
 
 .secondary:hover {
 	color: var(--gray-800);
+
 	background-color: var(--white);
 	border-color: var(--white);
 }
 
 .ghost {
 	color: var(--text-color-primary-hover);
+
 	background-color: transparent;
 	border-color: var(--text-color-primary-hover);
 }
 
 .ghost:hover {
 	color: var(--text-color-primary);
+
 	background-color: var(--white);
 	border-color: var(--white);
 }

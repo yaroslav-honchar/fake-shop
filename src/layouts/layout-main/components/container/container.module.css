@@ -1,6 +1,7 @@
 .container {
 	position: relative;
 	z-index: 5;
+
 	width: 100%;
 	max-width: 1500px;
 	padding-right: 1.5em;

@@ -1,9 +1,12 @@
 .button {
 	position: relative;
 	z-index: 1150;
+
 	display: flex;
+
 	align-items: center;
 	justify-content: center;
+
 	width: 2em;
 	min-width: 2em;
 	height: 2em;
@@ -13,9 +16,12 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
+
 	width: 100%;
 	height: 100%;
+
 	fill: var(--text-color-primary);
+
 	transition: all .45s ease;
 	transform: translate(-50%, -50%);
 	transform-origin: center center;
@@ -28,16 +34,19 @@
 
 ._close {
 	opacity: 0;
+
 	transform: translate(-50%, -50%) scale(0);
 }
 
 ._active ._close {
 	opacity: 1;
+
 	transform: translate(-50%, -50%) scale(1);
 }
 
 ._active ._menu {
 	opacity: 0;
+
 	transform: translate(-50%, -50%) scale(0);
 }
 
