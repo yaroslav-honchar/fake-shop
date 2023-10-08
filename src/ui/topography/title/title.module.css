@@ -1,0 +1,33 @@
+.title {
+	display: block;
+	font-style: normal;
+	line-height: normal;
+}
+
+._box {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+._block {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+._section {
+	font-size: 32px;
+	font-weight: 700;
+}
+
+._main {
+	font-size: 48px;
+	font-weight: 700;
+}
+
+._color_primary {
+	color: inherit;
+}
+
+._color_secondary {
+	color: var(--text-color-secondary);
+}

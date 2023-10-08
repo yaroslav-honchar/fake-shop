@@ -4,7 +4,7 @@ import React, { type FunctionComponent, type JSX, type ReactNode, useEffect } fr
 import cn from "classnames"
 import { ConfigProvider } from "antd"
 import { Provider, useDispatch } from "react-redux"
-import { roboto } from "@/layouts/fonts"
+import { poppins, roboto } from "@/layouts/fonts"
 import { type IStaticPropsGlobalInterface } from "@/interfaces"
 import { store } from "@/store/store"
 import { setCategories } from "@/store/slices"
@@ -34,7 +34,7 @@ const LayoutMain = ({
           href="/favicon.ico"
         />
       </Head>
-      <div className={cn(css.layout, roboto.className)}>
+      <div className={cn(css.layout, roboto.className, poppins.className)}>
         <Header />
         <div className={css.layout_content}>{children}</div>
         <Footer />
