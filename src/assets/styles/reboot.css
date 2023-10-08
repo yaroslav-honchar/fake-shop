@@ -5,9 +5,9 @@
 }
 
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 h1,
@@ -22,9 +22,9 @@ h6 {
 ul,
 ol,
 li {
-	list-style-type: none;
-	margin: 0;
 	padding: 0;
+	margin: 0;
+	list-style-type: none;
 }
 
 p {
@@ -43,10 +43,10 @@ a:hover {
 
 button {
 	padding: 0;
+	color: inherit;
+	cursor: pointer;
 	background-color: initial;
 	border: none;
-	cursor: pointer;
-	color: inherit;
 }
 
 audio,
@@ -76,8 +76,8 @@ textarea {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	appearance: none;
 	margin: 0;
+	appearance: none;
 }
 
 input[type="number"] {
@@ -85,11 +85,11 @@ input[type="number"] {
 }
 
 fieldset {
-	margin: 0;
-	padding: 0;
 	min-inline-size: min-content;
-	border-width: 0;
-	border-style: none;
+	padding: 0;
+	margin: 0;
 	border-color: transparent;
+	border-style: none;
+	border-width: 0;
 	border-image: none;
 }

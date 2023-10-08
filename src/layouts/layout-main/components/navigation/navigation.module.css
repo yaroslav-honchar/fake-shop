@@ -23,31 +23,31 @@
 }
 
 .nav_link:first-child {
+	font-weight: 300;
 	text-transform: uppercase;
 	transition: all .3s ease;
-	font-weight: 300;
 }
 
 @media (width <= 992px) {
 	.nav {
-		width: 100%;
-		height: 100%;
-		max-height: 100%;
 		position: fixed;
 		top: 0;
 		left: 0;
 		z-index: 1100;
-		background-color: rgb(0 0 0 / 35%);
-		transition: all .5s ease;
-		opacity: 0;
-		visibility: hidden;
+		width: 100%;
+		height: 100%;
+		max-height: 100%;
 		pointer-events: none;
+		visibility: hidden;
+		background-color: rgb(0 0 0 / 35%);
+		opacity: 0;
+		transition: all .5s ease;
 	}
 
 	.nav._show {
-		opacity: 1;
-		visibility: visible;
 		pointer-events: all;
+		visibility: visible;
+		opacity: 1;
 	}
 
 	.nav_wrap {
@@ -55,13 +55,13 @@
 		max-width: 375px;
 		height: 100%;
 		max-height: 100%;
-		padding-top: calc(20px + var(--header-offset-height));
 		padding-inline: 1.5em;
+		padding-top: calc(20px + var(--header-offset-height));
 		padding-bottom: 30px;
 		overflow-y: auto;
-		transform: translateX(calc(-100% - 10px));
-		transition: all .5s ease;
 		background-color: var(--bg-primary);
+		transition: all .5s ease;
+		transform: translateX(calc(-100% - 10px));
 	}
 
 	.nav._show .nav_wrap {
@@ -70,8 +70,8 @@
 
 	.nav_list {
 		flex-direction: column;
-		align-items: flex-start;
 		gap: 1em;
+		align-items: flex-start;
 	}
 
 	.nav_link {

@@ -1,9 +1,9 @@
 .footer_row {
 	display: flex;
 	flex-wrap: wrap;
+	row-gap: 20px;
 	width: calc(100% + 30px);
 	margin-inline: -15px;
-	row-gap: 20px;
 }
 
 .footer_col {
@@ -66,6 +66,11 @@
 }
 
 @media (width <= 768px) {
+	.footer_col {
+		margin: 0;
+	}
+
+	.footer_col,
 	.footer_col:not(._col_auto),
 	.footer_col._col_copyright,
 	.footer_col._col_descr {

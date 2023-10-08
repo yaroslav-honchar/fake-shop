@@ -1,11 +1,11 @@
 .container {
-	width: 100%;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding-right: 1.5em;
-	padding-left: 1.5em;
 	position: relative;
 	z-index: 5;
+	width: 100%;
+	max-width: 1500px;
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+	margin: 0 auto;
 }
 
 .container._fluid {

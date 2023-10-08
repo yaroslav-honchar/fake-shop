@@ -1,9 +1,9 @@
 .btn {
-	padding: .5rem 2rem;
 	display: flex;
+	gap: .4rem;
 	align-items: center;
 	justify-content: center;
-	gap: .4rem;
+	padding: .5rem 2rem;
 	font-size: 1.15rem;
 	border: 2px solid transparent;
 	transition: all .45s ease;
@@ -35,8 +35,8 @@
 
 .ghost {
 	color: var(--text-color-primary-hover);
-	border-color: var(--text-color-primary-hover);
 	background-color: transparent;
+	border-color: var(--text-color-primary-hover);
 }
 
 .ghost:hover {

@@ -1,22 +1,22 @@
 .logo {
+	position: relative;
 	display: block;
 	width: fit-content;
 	padding-left: .3em;
 	font-size: 3.375em;
-	position: relative;
 	color: var(--text-color-primary);
 	transition: all .35s ease;
 }
 
 .logo_value_absolute {
+	position: absolute;
+	top: 50%;
+	left: 1em;
 	display: block;
 	font-size: .35em;
-	position: absolute;
-	transform-origin: center;
 	font-weight: 300;
-	left: 1em;
-	top: 50%;
 	transform: translate(-75%, -50%) rotate(-90deg);
+	transform-origin: center;
 }
 
 @media (width >= 1024px) {

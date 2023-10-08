@@ -1,14 +1,14 @@
 body {
+	padding-right: var(--current-scrollbar-width);
 	font-family: var(--font-primary);
+	font-size: var(--font-size);
 	font-weight: normal;
 	line-height: 1.3;
-	font-size: var(--font-size);
 	color: var(--text-color-primary);
+	background-color: var(--bg-primary);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizelegibility;
-	padding-right: var(--current-scrollbar-width);
-	background-color: var(--bg-primary);
 }
 
 body._lock {

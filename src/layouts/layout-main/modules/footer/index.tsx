@@ -32,7 +32,7 @@ export const Footer = (): JSX.Element => {
                 </p>
               </div>
             </div>
-            <div className={cn(css.footer_col)}>
+            <div className={cn(css.footer_col, css._col_auto, "me-auto")}>
               <Title
                 tag={"span"}
                 styleType={"box"}
@@ -58,7 +58,7 @@ export const Footer = (): JSX.Element => {
                 ))}
               </ul>
             </div>
-            <div className={cn(css.footer_col)}>
+            <div className={cn(css.footer_col, css._col_auto)}>
               <Title
                 tag={"span"}
                 styleType={"box"}
