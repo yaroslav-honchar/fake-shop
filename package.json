@@ -10,7 +10,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:eslint": "eslint src/**/*.{ts,tsx} --fix --config .eslintrc.json",
+    "fix:eslint": "eslint src/**/*.{ts,tsx} --fix --config .eslintrc.json",
+    "fix:stylelint": "stylelint src/**/*.css --fix",
     "lint": "lint-staged"
   },
   "husky": {
@@ -20,7 +21,8 @@
   },
   "lint-staged": {
     "*.ts?(x)": [
-      "npm run test:eslint",
+      "npm run fix:eslint",
+      "npm run fix:stylelint",
       "git add ."
     ]
   },
@@ -49,6 +51,8 @@
     "lint-staged": "^14.0.1",
     "npm": "^10.2.0",
     "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
     "typescript": "5.1.6"
   }
 }

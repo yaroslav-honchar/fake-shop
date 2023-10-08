@@ -6,7 +6,7 @@ body {
 	color: var(--text-color-primary);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizelegibility;
 	padding-right: var(--current-scrollbar-width);
 	background-color: var(--bg-primary);
 }

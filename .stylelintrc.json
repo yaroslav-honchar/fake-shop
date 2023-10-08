@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "number-max-precision": 5,
+    "color-hex-case": "upper",
+    "block-no-empty": true,
+    "declaration-no-important": true,
+    "string-quotes": "double",
+    "font-family-name-quotes": "always-where-required"
+  }
+}

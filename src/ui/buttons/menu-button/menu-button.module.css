@@ -45,7 +45,7 @@
 	fill: var(--text-color-primary-hover);
 }
 
-@media (min-width: 993px) {
+@media (width >= 993px) {
 	.button {
 		display: none;
 	}

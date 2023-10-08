@@ -24,7 +24,7 @@
 	z-index: 1150;
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
 	.header_col:nth-child(1) {
 		order: 2;
 	}
@@ -38,7 +38,7 @@
 	}
 }
 
-@media (max-width: 425px) {
+@media (width <= 425px) {
 	.header_row {
 		width: calc(100% + 1rem);
 		margin-inline: -.5rem;

@@ -1,4 +1,4 @@
-@import "root.css";
-@import "reboot.css";
-@import "settings.css";
-@import "utills.css";
+@import url("root.css");
+@import url("reboot.css");
+@import url("settings.css");
+@import url("utills.css");

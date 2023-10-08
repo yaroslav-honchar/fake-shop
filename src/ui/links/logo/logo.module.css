@@ -19,13 +19,13 @@
 	transform: translate(-75%, -50%) rotate(-90deg);
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
 	.logo:hover {
 		color: var(--text-color-primary-hover);
 	}
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
 	.logo {
 		font-size: 2.75em;
 	}

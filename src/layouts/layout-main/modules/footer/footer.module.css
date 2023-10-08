@@ -1,6 +1,3 @@
-.footer {
-}
-
 .footer_row {
 	display: flex;
 	flex-wrap: wrap;
@@ -60,7 +57,7 @@
 	transition: all .4s ease;
 }
 
-.footer_link:first-letter {
+.footer_link::first-letter {
 	text-transform: uppercase;
 }
 
