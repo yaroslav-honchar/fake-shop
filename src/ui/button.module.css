@@ -6,11 +6,13 @@
 	align-items: center;
 	justify-content: center;
 
+	width: fit-content;
 	padding: .5rem 2rem;
 
 	font-size: 1.15rem;
 
 	border: 2px solid transparent;
+	border-radius: .35rem;
 
 	transition: all .45s ease;
 }

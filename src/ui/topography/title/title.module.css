@@ -2,26 +2,26 @@
 	display: block;
 
 	font-style: normal;
-	line-height: normal;
+	line-height: 1.3;
 }
 
 ._box {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 }
 
 ._block {
-	font-size: 20px;
+	font-size: 1.5rem;
 	font-weight: 400;
 }
 
 ._section {
-	font-size: 32px;
+	font-size: 2rem;
 	font-weight: 700;
 }
 
 ._main {
-	font-size: 48px;
+	font-size: 3rem;
 	font-weight: 700;
 }
 
@@ -31,4 +31,43 @@
 
 ._color_secondary {
 	color: var(--text-color-secondary);
+}
+
+._with_line {
+	display: flex;
+
+	gap: 1rem;
+
+	align-items: center;
+
+	width: 100%;
+}
+
+._with_line::before {
+	display: block;
+
+	width: 2rem;
+	height: auto;
+
+	content: "";
+
+	border-bottom: 1px solid var(--text-color-primary);
+}
+
+._color_secondary._with_line::before {
+	border-color: var(--text-color-secondary);
+}
+
+@media (width <= 576px) {
+	._main {
+		font-size: 2.5rem;
+	}
+
+	._with_line {
+		gap: .75rem;
+	}
+
+	._with_line::before {
+		width: 1.5rem;
+	}
 }

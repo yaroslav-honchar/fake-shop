@@ -5,6 +5,7 @@ import cn from "classnames"
 interface IProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   styleType: "box" | "block" | "section" | "main"
   styleColor?: "primary" | "secondary"
+  withLine?: boolean
   tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span"
 }
 
@@ -13,6 +14,7 @@ export const Title: React.FC<IProps> = ({
   className,
   tag = "h2",
   styleType,
+                                          withLine = false,
                                           styleColor,
 }): JSX.Element => {
   const classNames = cn(className, css.title, {
@@ -22,6 +24,7 @@ export const Title: React.FC<IProps> = ({
     [css._main]: styleType === "main",
     [css._color_primary]: styleColor === "primary",
     [css._color_secondary]: styleColor === "secondary",
+    [css._with_line]: withLine,
   })
 
   switch (tag) {

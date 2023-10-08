@@ -26,9 +26,12 @@ export const Footer = (): JSX.Element => {
               />
               <div className={css.footer_descr}>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  This website is part of our pet project and is created solely for educational and
+                  demonstration purposes. All products, prices, and other information on this
+                  website are fictional and for demonstration purposes only. We are not a real
+                  online store and do not sell any products or services. Please do not enter
+                  personal information or make any payments for any products on this website, as it
+                  is purely an educational project.
                 </p>
               </div>
             </div>

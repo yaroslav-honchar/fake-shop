@@ -5,6 +5,10 @@
 	z-index: 1000;
 
 	width: 100%;
+	padding-block: 1rem;
+
+	background-color: var(--bg-primary);
+	border-bottom: 1px solid var(--text-color-secondary);
 }
 
 .header_row {
