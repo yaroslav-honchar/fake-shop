@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:editorconfig": "editorconfig-checker --exclude '.git|node_modules'",
     "test:eslint": "eslint src/**/*.{ts,tsx} --fix --config .eslintrc.json",
     "lint": "lint-staged"
   },
