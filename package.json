@@ -8,6 +8,7 @@
     "start": "next start",
     "test:editorconfig": "editorconfig-checker --exclude '.git|.husky|node_modules'",
     "test:eslint": "eslint src/**/*.{ts,tsx,js,jsx} --config .eslintrc.json",
+    "pre-commit": "lint-staged",
     "lint": "next lint"
   },
   "lint-staged": {
