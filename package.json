@@ -10,10 +10,11 @@
     "test:eslint": "eslint src/**/*.{ts,tsx,js,jsx} --config .eslintrc.json",
     "lint": "next lint"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test:eslint"
-    }
+  "lint-staged": {
+    "*.ts": [
+      "npm run test:eslint",
+      "npm run test:editorconfig"
+    ]
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
