@@ -7,7 +7,7 @@ import { Provider, useDispatch } from "react-redux"
 import { poppins, roboto } from "@/layouts/fonts"
 import { type IStaticPropsGlobalInterface } from "@/interfaces"
 import { store } from "@/store/store"
-import { setCategories } from "@/store/slices"
+import { setCategories, setProducts } from "@/store/slices"
 import { Header, Footer } from "@/layouts/layout-main/modules"
 import css from "@/layouts/layout-main/layout.module.css"
 import Head from "next/head"
@@ -15,12 +15,14 @@ import Head from "next/head"
 const LayoutMain = ({
   children,
   categories,
+  products,
 }: { children?: ReactNode } & WithLayoutProps): JSX.Element => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(setCategories(categories))
-  }, [categories, dispatch])
+    dispatch(setProducts(products))
+  }, [categories, products, dispatch])
 
   return (
     <>

@@ -1,6 +1,6 @@
 import React, { type DetailedHTMLProps, type HTMLAttributes, type JSX } from "react"
 import cn from "classnames"
-import css from "./container.module.css"
+import css from "./wrapper-container.module.css"
 
 interface IContainerProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   size?: "fluid"

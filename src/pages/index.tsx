@@ -3,7 +3,7 @@ import { type JSX } from "react"
 import { type GetStaticProps } from "next"
 import { withLayout } from "@/layouts/layout-main"
 import { getStaticPropsGlobal } from "@/lib"
-import { HeroMain } from "@/modules/hero-main"
+import { HeroMain, Categories, Products } from "@/modules"
 
 // import { type IStaticPropsGlobalInterface } from "@/interfaces"
 
@@ -14,6 +14,8 @@ function HomePage(): JSX.Element {
         <title>Fake shop | Home</title>
       </Head>
       <HeroMain />
+      <Categories />
+      <Products />
     </>
   )
 }

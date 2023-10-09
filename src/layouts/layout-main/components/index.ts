@@ -1,2 +1,2 @@
 export * from "./navigation"
-export * from "../../../components/container"
+export * from "../../../components/wrappers/container"
