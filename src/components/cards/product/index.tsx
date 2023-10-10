@@ -4,6 +4,7 @@ import React, { type DetailedHTMLProps, type HTMLAttributes, type JSX } from "re
 import css from "./card-product.module.css"
 import { type IProduct } from "@/interfaces"
 import Image from "next/image"
+import { HeartOutlined, ShareAltOutlined, ShoppingCartOutlined } from "@ant-design/icons"
 
 interface IProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   product: IProduct
@@ -23,9 +24,37 @@ export const CardProduct: React.FC<IProps> = ({ product }): JSX.Element => {
           width={319}
           height={319}
         />
+        <div className={css.controls}>
+          <button
+            type={"button"}
+            aria-label={"Like"}
+            className={css.btn}
+          >
+            <HeartOutlined className={css.icon} />
+          </button>
+          <button
+            type={"button"}
+            aria-label={"Add to cart"}
+            className={css.btn}
+          >
+            <ShoppingCartOutlined className={css.icon} />
+          </button>
+          <button
+            type={"button"}
+            aria-label={"Add to cart"}
+            className={css.btn}
+          >
+            <ShareAltOutlined className={css.icon} />
+          </button>
+        </div>
       </div>
       <div className={css.body}>
-        <p className={css.title}>{title}</p>
+        <a
+          href={"/"}
+          className={css.title}
+        >
+          {title}
+        </a>
         <p className={css.price}>${price}</p>
         <p className={css.category}>{category}</p>
       </div>
