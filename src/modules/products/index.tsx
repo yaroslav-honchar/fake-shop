@@ -10,7 +10,7 @@ import { type IProduct } from "@/interfaces"
 import { CardProduct } from "@/components/cards/product"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
-// import { CaretDownOutlined } from "@ant-design/icons"
+import { ButtonSlider } from "@/ui"
 
 interface IProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
@@ -28,24 +28,20 @@ export const Products: React.FC<IProps> = (): JSX.Element => {
           Our Products
         </Title>
 
-        <div
-            className={css.slider_wrapper}
-        >
-        <Swiper
+        <div className={css.slider_wrapper}>
+          <Swiper
             className={css.slider}
-          spaceBetween={30}
-          slidesPerView={4}
-        >
-          {products.map((product: IProduct) => (
-            <SwiperSlide key={product.id}>
-              <CardProduct product={product} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-          {/*<button>*/}
-          {/*  <CaretDownOutlined />*/}
-          {/*</button>*/}
+            spaceBetween={30}
+            slidesPerView={4}
+          >
+            {products.map((product: IProduct) => (
+              <SwiperSlide key={product.id}>
+                <CardProduct product={product} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <ButtonSlider vector={"prev"} />
+          <ButtonSlider vector={"next"} />
         </div>
       </Container>
     </Section>

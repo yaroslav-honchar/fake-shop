@@ -2,7 +2,7 @@
 
 import React, { type JSX } from "react"
 import { Navigation, Container } from "@/layouts/layout-main/components"
-import { MenuButton, LinkButton, Logo } from "@/ui"
+import { ButtonMenu, LinkButton, Logo } from "@/ui"
 import css from "./header.module.css"
 
 export const Header = (): JSX.Element => {
@@ -17,7 +17,7 @@ export const Header = (): JSX.Element => {
             />
           </div>
           <div className={css.header_col}>
-            <MenuButton />
+            <ButtonMenu />
             <Navigation />
           </div>
           <div className={css.header_col}>

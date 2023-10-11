@@ -2,18 +2,19 @@
 
 import React, { type DetailedHTMLProps, type HTMLAttributes, type JSX } from "react"
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons"
-import css from "./menu-button.module.css"
+import css from "./button-menu.module.css"
 import cn from "classnames"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "@/store/store"
 import { navigationToggle } from "@/layouts/layout-main/components/navigation/navigation.slice"
 
-interface IMenuButtonProps extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-}
+interface IButtonMenuProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {}
 
-export const MenuButton:
-  React.FC<IMenuButtonProps> = (props): JSX.Element => {
-  const isNavigationOpen: boolean = useSelector((state: RootState) => state.navigation.isNavigationOpen)
+export const ButtonMenu: React.FC<IButtonMenuProps> = (props): JSX.Element => {
+  const isNavigationOpen: boolean = useSelector(
+    (state: RootState) => state.navigation.isNavigationOpen,
+  )
   const dispatch = useDispatch()
 
   const toggleNavigationHandle = () => {

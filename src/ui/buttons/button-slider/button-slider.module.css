@@ -1,0 +1,30 @@
+.btn {
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+
+	width: 3rem;
+	height: 3rem;
+
+	background-color: var(--bg-primary);
+}
+
+.btn:hover {
+	background-color: var(--text-color-primary);
+}
+
+.icon svg {
+	display: block;
+
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.btn._prev .icon svg {
+	transform: rotate(-90deg);
+}
+
+.btn._next .icon svg {
+	transform: rotate(90deg);
+}
