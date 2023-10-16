@@ -17,3 +17,9 @@ body {
 body._lock {
 	overflow: hidden;
 }
+
+.swiper-button-disabled {
+	pointer-events: none;
+
+	opacity: .4;
+}

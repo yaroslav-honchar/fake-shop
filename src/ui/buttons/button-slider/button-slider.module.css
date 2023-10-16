@@ -7,11 +7,15 @@
 	width: 3rem;
 	height: 3rem;
 
-	background-color: var(--bg-primary);
+	background-color: var(--text-color-primary);
+	border-radius: 50%;
+
+	transition: all .3s ease;
 }
 
 .btn:hover {
-	background-color: var(--text-color-primary);
+	background-color: var(--bg-primary);
+	box-shadow: 0 0 15px rgb(0 0 0 / 30%);
 }
 
 .icon svg {
@@ -19,12 +23,24 @@
 
 	width: 1.5rem;
 	height: 1.5rem;
+	fill: var(--bg-primary);
+
+	transition: all .3s ease;
+	transform-origin: center center;
+}
+
+.btn:hover .icon svg {
+	fill: var(--text-color-primary);
 }
 
 .btn._prev .icon svg {
-	transform: rotate(-90deg);
+	margin-right: 3px;
+
+	transform: rotate(90deg);
 }
 
 .btn._next .icon svg {
-	transform: rotate(90deg);
+	margin-left: 3px;
+
+	transform: rotate(-90deg);
 }
