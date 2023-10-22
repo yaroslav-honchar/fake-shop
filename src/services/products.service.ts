@@ -17,7 +17,6 @@ class Products extends CoreService {
   }
 
   async getAll() {
-    console.log(this.PRODUCTS_URL)
     return this.http.get<IProduct[]>(this.PRODUCTS_URL)
   }
 }

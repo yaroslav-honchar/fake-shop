@@ -1,3 +1,4 @@
 .section {
 	padding-block: 4rem;
+	container-type: inline-size;
 }

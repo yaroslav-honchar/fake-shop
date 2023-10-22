@@ -33,7 +33,7 @@ export const SingleProduct: React.FC<IProps> = ({ product }): JSX.Element => {
 
                 <h1 className={css.title}>{title}</h1>
                 <h2 className={css.price}>
-                  {new Intl.NumberFormat("ja-JP", { style: "currency", currency: "USD" }).format(
+                  {new Intl.NumberFormat("en-IN", { style: "currency", currency: "USD" }).format(
                     price,
                   )}
                 </h2>

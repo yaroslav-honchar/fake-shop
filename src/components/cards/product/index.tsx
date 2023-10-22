@@ -5,13 +5,14 @@ import css from "./card-product.module.css"
 import { type IProduct } from "@/interfaces"
 import Image from "next/image"
 import { HeartOutlined, ShareAltOutlined, ShoppingCartOutlined } from "@ant-design/icons"
+import { routes } from "@/routes"
 
 interface IProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   product: IProduct
 }
 
 export const CardProduct: React.FC<IProps> = ({ product }): JSX.Element => {
-  const { title, price, category, image } = product
+  const { title, price, category, image, id } = product
 
   return (
     <div className={css.card}>
@@ -49,12 +50,14 @@ export const CardProduct: React.FC<IProps> = ({ product }): JSX.Element => {
       </div>
       <div className={css.body}>
         <a
-          href={"/"}
+          href={routes.product + "/" + id}
           className={css.title}
         >
           {title}
         </a>
-        <p className={css.price}>${price}</p>
+        <p className={css.price}>
+          {new Intl.NumberFormat("en-IN", { style: "currency", currency: "USD" }).format(price)}
+        </p>
         <p className={css.category}>{category}</p>
       </div>
     </div>

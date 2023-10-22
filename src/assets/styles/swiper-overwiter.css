@@ -1,0 +1,5 @@
+.swiper-button-disabled {
+	pointer-events: none;
+
+	opacity: .5;
+}
