@@ -1,3 +1,5 @@
+"use client"
+
 import React, { type DetailedHTMLProps, type HTMLAttributes, type JSX } from "react"
 import css from "./single-product.module.css"
 import { IProduct } from "@/interfaces"
@@ -27,10 +29,15 @@ export const SingleProduct: React.FC<IProps> = ({ product }): JSX.Element => {
                 />
               </div>
               <div className={css.descr}>
-                <h1 className={css.title}>{title}</h1>
-                <h2 className={css.price}>{price}$</h2>
-
                 <Rating rating={rating} />
+
+                <h1 className={css.title}>{title}</h1>
+                <h2 className={css.price}>
+                  {new Intl.NumberFormat("ja-JP", { style: "currency", currency: "USD" }).format(
+                    price,
+                  )}
+                </h2>
+
                 <div>
                   <p>{description}</p>
                 </div>
