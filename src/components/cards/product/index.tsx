@@ -12,7 +12,6 @@ interface IProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLD
 
 export const CardProduct: React.FC<IProps> = ({ product }): JSX.Element => {
   const { title, price, category, image } = product
-  console.log(image)
 
   return (
     <div className={css.card}>

@@ -1,13 +1,24 @@
 "use client"
 
-import React, { type JSX } from "react"
+import React, { type JSX, useEffect, useRef } from "react"
 import { Navigation, Container } from "@/layouts/layout-main/components"
 import { ButtonMenu, LinkButton, Logo } from "@/ui"
 import css from "./header.module.css"
 
 export const Header = (): JSX.Element => {
+  const headerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--header-offset-height",
+      headerRef.current?.offsetHeight + "px",
+    )
+  }, [])
   return (
-    <header className={css.header}>
+    <header
+      ref={headerRef}
+      className={css.header}
+    >
       <Container>
         <div className={css.header_row}>
           <div className={css.header_col}>
