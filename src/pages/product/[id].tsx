@@ -3,7 +3,7 @@ import { type JSX } from "react"
 import { GetStaticPaths, type GetStaticProps } from "next"
 import { withLayout } from "@/layouts/layout-main"
 import { getStaticPropsGlobal } from "@/lib"
-import { SingleProduct } from "@/modules"
+import { Products, SingleProduct } from "@/modules"
 import { IProduct, IStaticPropsGlobalInterface } from "@/interfaces"
 import { ProductsService } from "@/services/products.service"
 
@@ -14,6 +14,7 @@ function ProductPage({ product }: ProductPageProps): JSX.Element {
         <title>Fake shop | Product</title>
       </Head>
       <SingleProduct product={product} />
+      <Products />
     </>
   )
 }

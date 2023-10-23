@@ -81,6 +81,12 @@
 	color: var(--text-color-primary-hover);
 }
 
+@media (width <= 992px) {
+	.hero_bg_video {
+		display: none;
+	}
+}
+
 @media (width <= 576px) {
 	.hero_content_box {
 		padding: 1.5rem;
