@@ -6,6 +6,7 @@ import { getStaticPropsGlobal } from "@/lib"
 import { Products, SingleProduct } from "@/modules"
 import { IProduct, IStaticPropsGlobalInterface } from "@/interfaces"
 import { ProductsService } from "@/services/products.service"
+import { routes } from "@/routes"
 
 function ProductPage({ product }: ProductPageProps): JSX.Element {
   return (
@@ -21,9 +22,11 @@ function ProductPage({ product }: ProductPageProps): JSX.Element {
 
 export default withLayout(ProductPage)
 
-export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { data: products } = await ProductsService.getAll()
+
   return {
-    paths: [],
+    paths: products.map((product) => routes.product + product.id.toString()),
     fallback: "blocking",
   }
 }

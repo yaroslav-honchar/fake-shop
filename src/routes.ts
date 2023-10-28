@@ -10,7 +10,7 @@ export interface IRoutes {
 export const routes: IRoutes = {
   home: "/",
   catalog: "catalog",
-  product: "product",
+  product: "/product/",
   privacy_policy: "privacy-policy",
   about: "privacy-policy",
   contacts: "privacy-policy",

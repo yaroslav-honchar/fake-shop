@@ -50,7 +50,7 @@ export const CardProduct: React.FC<IProps> = ({ product }): JSX.Element => {
       </div>
       <div className={css.body}>
         <a
-          href={routes.product + "/" + id}
+          href={routes.product + id}
           className={css.title}
         >
           {title}
