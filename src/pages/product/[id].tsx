@@ -1,10 +1,10 @@
 import Head from "next/head"
 import { type JSX } from "react"
-import { GetStaticPaths, type GetStaticProps } from "next"
+import type { GetStaticPaths, GetStaticProps } from "next"
+import type { IProduct, IStaticPropsGlobalInterface } from "@/interfaces"
 import { withLayout } from "@/layouts/layout-main"
 import { getStaticPropsGlobal } from "@/lib"
-import { Products, SingleProduct } from "@/modules"
-import { IProduct, IStaticPropsGlobalInterface } from "@/interfaces"
+import { SingleProduct, WatchedProducts } from "@/modules"
 import { ProductsService } from "@/services/products.service"
 import { routes } from "@/routes"
 
@@ -15,7 +15,7 @@ function ProductPage({ product }: ProductPageProps): JSX.Element {
         <title>Fake shop | Product</title>
       </Head>
       <SingleProduct product={product} />
-      <Products />
+      <WatchedProducts />
     </>
   )
 }
@@ -33,6 +33,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data: product } = await ProductsService.getById(params?.id ? params?.id.toString() : "")
+
+  if (!product) {
+    return {
+      notFound: true,
+    }
+  }
 
   return {
     props: {

@@ -1,3 +1,18 @@
+* {
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--text-color-primary);
+		border-radius: 4px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+}
+
 html,
 body {
 	padding-right: var(--current-scrollbar-width);
