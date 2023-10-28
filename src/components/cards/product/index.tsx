@@ -56,7 +56,8 @@ export const CardProduct: React.FC<IProps> = ({ product }): JSX.Element => {
           {title}
         </a>
         <p className={css.price}>
-          {new Intl.NumberFormat("en-IN", { style: "currency", currency: "USD" }).format(price)}
+          {price}
+          {/*{new Intl.NumberFormat("en-IN", { style: "currency", currency: "USD" }).format(price)}*/}
         </p>
         <p className={css.category}>{category}</p>
       </div>

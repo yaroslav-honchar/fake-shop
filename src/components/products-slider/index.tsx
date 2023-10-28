@@ -45,7 +45,7 @@ export const ProductsSlider: React.FC<IProps> = ({ products, sectionTitle }): JS
         <Swiper
           modules={[Navigation]}
           className={css.slider}
-          spaceBetween={30}
+          spaceBetween={32}
           slidesPerView={1}
           navigation={{
             prevEl: ".products-prev",

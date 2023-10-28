@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { type RootState } from "@/store/store"
 import { navigationClose } from "@/layouts/layout-main/components/navigation/navigation.slice"
 import css from "./navigation.module.css"
+import { routes } from "@/routes"
 
 export const Navigation = (): JSX.Element => {
   const categories: string[] = useSelector((state: RootState) => state.products.categories)
@@ -40,7 +41,10 @@ export const Navigation = (): JSX.Element => {
               >
                 <Link
                   className={css.nav_link}
-                  href={category.replace(/\s/g, "-")}
+                  href={{
+                    pathname: routes.catalog,
+                    query: { category },
+                  }}
                   onClick={closeNavigationHandle}
                 >
                   {category}

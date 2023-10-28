@@ -3,6 +3,7 @@ import { type JSX } from "react"
 import { type GetStaticProps } from "next"
 import { withLayout } from "@/layouts/layout-main"
 import { getStaticPropsGlobal } from "@/lib"
+import { Catalog } from "@/modules"
 
 function CatalogPage(): JSX.Element {
   return (
@@ -10,6 +11,7 @@ function CatalogPage(): JSX.Element {
       <Head>
         <title>Fake shop | Catalog</title>
       </Head>
+      <Catalog />
     </>
   )
 }

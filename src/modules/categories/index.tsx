@@ -6,6 +6,7 @@ import Image from "next/image"
 import { Container, Section } from "@/components"
 import Link from "next/link"
 import { Title } from "@/ui"
+import { routes } from "@/routes"
 
 interface IProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
@@ -15,7 +16,13 @@ export const Categories: React.FC<IProps> = (): JSX.Element => {
   return (
     <Section className={css.categories}>
       <Container>
-        <Title className={css.title} styleType={"section"} tag={"h2"}>Browse The Range</Title>
+        <Title
+          className={css.title}
+          styleType={"section"}
+          tag={"h2"}
+        >
+          Browse The Range
+        </Title>
         <p className={css.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
         <ul className={css.grid}>
@@ -29,7 +36,11 @@ export const Categories: React.FC<IProps> = (): JSX.Element => {
               >
                 <Link
                   className={css.link}
-                  href={"/"} >
+                  href={{
+                    pathname: routes.catalog,
+                    query: { category },
+                  }}
+                >
                   <Image
                     className={css.img}
                     src={`/images/categories/${imageName}.jpg`}

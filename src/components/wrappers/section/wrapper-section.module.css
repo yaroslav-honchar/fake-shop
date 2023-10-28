@@ -1,4 +1,9 @@
 .section {
+	position: relative;
+	z-index: 5;
+
 	padding-block: 4rem;
+
+	background-color: var(--bg-primary);
 	container-type: inline-size;
 }

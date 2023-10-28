@@ -52,7 +52,10 @@ export const Footer = (): JSX.Element => {
                     className={css.footer_links_item}
                   >
                     <Link
-                      href={category}
+                      href={{
+                        pathname: routes.catalog,
+                        query: { category },
+                      }}
                       className={css.footer_link}
                     >
                       {category}
